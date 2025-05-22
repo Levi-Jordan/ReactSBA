@@ -67,7 +67,3 @@ const loaded = () => {
   // If data exists, run the loaded function; otherwise, run loading.
   return data ? loaded() : loading();
 }
-
-// //export default function Homepage(){
-//     return <h1> News </h1>;
-// }

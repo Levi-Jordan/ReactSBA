@@ -33,6 +33,8 @@ const loaded = () => {
     return (
       <div>
       <h1> News</h1>
+      <h3>Do you hate the news?</h3>
+      <h4>Yeah... Let's just filter it by what we like.</h4>
       <input
         type="text"
         value={query}

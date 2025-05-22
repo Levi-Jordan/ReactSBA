@@ -3,8 +3,8 @@ React application using the news API.
 Pages include homepage, about, and an error page.
 
 Ways to improve / goals:
+Static nav bar at the top of the screen
 More CSS styling
-Allowing the user to query for news of their choice
 Pagination
 
 

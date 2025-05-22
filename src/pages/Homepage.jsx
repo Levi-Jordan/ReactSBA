@@ -6,14 +6,16 @@ import axios from "axios";
 export default function Homepage() {
   // Our api key from some third-party API.
   const apiKey = "2eb30dba45f2448597d2e61ad03b1942";
-  const url = `https://newsapi.org/v2/everything?q=gaming&apiKey=2eb30dba45f2448597d2e61ad03b1942`;
+//   const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=2eb30dba45f2448597d2e61ad03b1942`;
 
   // State to hold the data.
   const [data, setData] = useState(null);
+  const [query, setQuery] = useState("Gaming");
 
   // Function to fetch data.
   const getData = async () => {
     try {
+      const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=2eb30dba45f2448597d2e61ad03b1942`;  
       const response = await axios.get(url);
       setData(response.data);
     } catch(e) {
@@ -30,7 +32,13 @@ export default function Homepage() {
 const loaded = () => {
     return (
       <div>
-      <h1> News in Gaming</h1>
+      <h1> News</h1>
+      <input
+        type="text"
+        value={query}
+        onChange={(e)=> setQuery(e.target.value)}/>
+      <button onClick={getData}>Search</button>  
+    
       <ul>
         {data.articles.map((article, index) => (
           <li key={index}>

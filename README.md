@@ -1,3 +1,16 @@
+React application using the news API.
+
+Pages include homepage, about, and an error page.
+
+Ways to improve / goals:
+More CSS styling
+Allowing the user to query for news of their choice
+Pagination
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
